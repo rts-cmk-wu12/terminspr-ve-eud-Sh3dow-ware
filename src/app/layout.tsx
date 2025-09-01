@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
+import "@/styles/main.sass"
 import {ReactNode} from "react";
-
-
-
 
 export const metadata: Metadata = {
   title: "Landrup Dans",
