@@ -1,0 +1,57 @@
+@use "@/styles/utils/variables" as variables
+
+
+.start-screen
+  display: flex
+  justify-content: space-evenly
+  flex-direction: column
+  background-image: url("/images/start-screen.jpg")
+  height: 100vh
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  flex-direction: column
+  font-family: "Ubuntu"
+
+
+  &__title
+    font-size: 2.25rem
+    margin-left: 1rem
+    -webkit-text-stroke: 2px variables.$black-color
+    -webkit-text-fill-color: transparent
+    line-height: 0
+
+  &__under-title
+    margin-left: 1rem
+    font-family: "Racing Sans One"
+    -webkit-text-stroke: 2px variables.$black-color
+    color: variables.$lighter-dark-purple-color
+    line-height: 78px
+    font-size: 4.5rem
+
+  &__line
+    background-color: variables.$lighter-dark-purple-color
+    width: 250px
+    height: 15px
+    margin-right: 2.25rem
+
+
+
+  &__button
+    opacity: 0
+    background-color: variables.$dark-purple-color
+    align-self: center
+    padding: 15px
+    max-width: 250px
+    width: 100%
+    text-align: center
+    color: variables.$white-color
+    border-radius: 10px
+    animation: opacityTransition 1500ms forwards
+
+
+@keyframes opacityTransition
+  0%
+    opacity: 0
+  100%
+    opacity: 1
