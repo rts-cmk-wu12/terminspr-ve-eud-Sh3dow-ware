@@ -19,3 +19,7 @@ export type AssetProps = {
 export type GetSpecificActivityType = {
   activity: ActivitiesProps
 }
+
+export type GetAllActivityType = {
+  activity: ActivitiesProps[]
+}

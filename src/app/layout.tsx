@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/main.sass"
+import "@/styles/components/error-msg/error-msg.sass"
 import {ReactNode} from "react";
 
 export const metadata: Metadata = {
