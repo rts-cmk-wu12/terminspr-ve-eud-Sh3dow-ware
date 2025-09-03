@@ -1,6 +1,6 @@
-import {GetSpecificActivity} from "@/components/ui/GetSpecificActivity";
+import {GetSpecificActivity} from "@/components/ui/Activity/GetSpecificActivity";
 import {MdError} from "react-icons/md";
-import {NavBar} from "@/components/ui/NavBar";
+import {NavBar} from "@/components/ui/Footer/NavBar";
 import {ErrorMessage} from "@/components/error-ui/ErrorMessage";
 
 

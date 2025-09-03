@@ -1,9 +1,10 @@
-import {NavBar} from "@/components/ui/NavBar";
+import {NavBar} from "@/components/ui/Footer/NavBar";
+import {Login} from "@/components/ui/Login/Login";
 
 const loginPage = () => {
   return (
       <>
-      <h2>Hej</h2>
+        <Login></Login>
         <NavBar></NavBar>
       </>
   );

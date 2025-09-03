@@ -1,7 +1,8 @@
-import {NavBar} from "@/components/ui/NavBar";
-import {Activities} from "@/components/ui/Activities";
+import {NavBar} from "@/components/ui/Footer/NavBar";
+import {Activities} from "@/components/ui/Activity/Activities";
 import {ErrorMessage} from "@/components/error-ui/ErrorMessage";
 import {ActivitiesProps} from "@/types/ActivitiesType";
+import {SearchFilter} from "@/components/ui/Activity/SearchFilter";
 
 const searchActivityPage = async () => {
   try {
@@ -10,11 +11,7 @@ const searchActivityPage = async () => {
     return (
         <>
           <main className={"main-activities"}>
-            {data.map((item: ActivitiesProps) => (
-                <Activities key={item.id} name={item.name} minAge={item.minAge} maxAge={item.maxAge}
-                            description={item.description} weekday={item.weekday} time={item.time}
-                            asset={item.asset} id={item.id}/>
-            ))}
+            <SearchFilter activity={data}></SearchFilter>
           </main>
           <NavBar></NavBar>
         </>

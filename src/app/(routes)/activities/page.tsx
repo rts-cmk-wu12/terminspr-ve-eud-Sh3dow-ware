@@ -1,7 +1,7 @@
-import {Activities} from "@/components/ui/Activities";
+import {Activities} from "@/components/ui/Activity/Activities";
 import {ActivitiesProps} from "@/types/ActivitiesType";
 import { MdError } from "react-icons/md";
-import {NavBar} from "@/components/ui/NavBar";
+import {NavBar} from "@/components/ui/Footer/NavBar";
 import {ErrorMessage} from "@/components/error-ui/ErrorMessage";
 export default async function ActivitiesPage() {
 

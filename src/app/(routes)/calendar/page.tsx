@@ -1,9 +1,9 @@
-import {NavBar} from "@/components/ui/NavBar";
+import {NavBar} from "@/components/ui/Footer/NavBar";
 
-const CalendarPage  = () => {
+const CalendarPage = () => {
   return (
       <>
-      <h2>Hej</h2>
+        <h2>Calendar Side</h2>
         <NavBar></NavBar>
       </>
   );
