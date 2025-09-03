@@ -1,0 +1,52 @@
+@use "@/styles/utils/variables" as variables
+
+
+
+.login-wrapper
+  display: flex
+  flex-direction: column
+  height: 100vh
+  justify-content: center
+  align-items: center
+  font-family: variables.$ubuntu
+  background-image: url("/images/start-screen.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  overflow: hidden
+  &__title
+    z-index: 4
+    margin-right: 125px
+    color: white
+    font-size: variables.$font-size-48
+    padding: 0.25rem
+
+.login-form
+  z-index: 4
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 1rem
+  width: 100%
+  &__label
+    max-width: 332px
+    width: 100%
+  &__input
+    max-width: 332px
+    transition: 300ms
+    width: 100%
+    padding: 1rem
+    border: none
+    outline: none
+    &:focus
+      outline: variables.$dark-purple-color solid 2px
+  &__submit
+    font-family: variables.$ubuntu
+    background-color: variables.$dark-purple-color
+    color: variables.$white-color
+    max-width: 250px
+    width: 100%
+    padding: 1rem
+    border-radius: 10px
+    border: none
+    outline: none
