@@ -13,13 +13,13 @@ Eftermiddag - **14:10**
 
 ## Dag 2
 
-Morgen - **8:34** 
+Morgen - **8:34**  
 Eftermiddag - **15:57**
 
 ## Dag 3
 
-Morgen - **8:14** 
-Eftermiddag - (tidspunkt)
+Morgen - **8:14**  
+Eftermiddag - **15:49**
 
 ## Dag 4
 
