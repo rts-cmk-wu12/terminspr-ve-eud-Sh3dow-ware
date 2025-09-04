@@ -15,11 +15,12 @@ export const Login = () => {
           <form className={"login-form"} action={formAction}>
             <label className={"login-form__label"} htmlFor={"username"}>
               <input className={"login-form__input"} type={"text"} name={"username"} placeholder={"brugernavn"}/>
-              <p>{!formState.success ? formState.properties?.username?.errors : null}</p>
+              {!formState?.success && formState.properties?.username?.errors &&  <p className={"login-form__error"}>{formState.properties?.username?.errors}</p>}
+              {!formState?.success && formState.message && <p className={"login-form__error"}>{formState.message}</p>}
             </label>
             <label className={"login-form__label"} htmlFor={"password"}>
               <input className={"login-form__input"} type={"password"} name={"password"} placeholder={"adgangskode"}/>
-              <p>{!formState.success ? formState.properties?.password?.errors : null}</p>
+              {!formState?.success && formState.properties?.password?.errors && <p className={"login-form__error"}>{formState.properties?.password?.errors}</p>}
             </label>
             <button type={"submit"} className={"login-form__submit"}>Log Ind</button>
           </form>
