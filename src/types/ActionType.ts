@@ -1,11 +1,11 @@
 export type Errors = {
-  errors: []
+  errors: string[]
 }
 
 export type PreviousStateSignUpProps = {
   username?: string;
   password?: string;
-  success: boolean;
+  success?: boolean;
   properties?: {
     username?: Errors
     password?: Errors
