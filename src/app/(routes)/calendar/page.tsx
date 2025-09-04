@@ -1,12 +1,28 @@
-import {NavBar} from "@/components/ui/Footer/NavBar";
+import {getUser} from "@/app/utils/apiUtils";
+import {UserProps} from "@/types/UserType";
 
-const CalendarPage = () => {
+
+const CalendarPage = async () => {
+  const user: UserProps = await getUser()
+
+  // To be added default, shows default screens, eh instructor role shows something else.
+  if (user.role === "default") {
+    return (
+        <>
+          <h2>Kalendar</h2>
+          <p>Hejsa Default</p>
+        </>
+    )
+  }
   return (
       <>
-        <h2>Calendar Side</h2>
-        <NavBar></NavBar>
+        {user.activities.map((item => {
+          return (
+              <h2>{item.name}</h2>
+          )
+        }))}
       </>
-  );
+  )
 };
 
 
