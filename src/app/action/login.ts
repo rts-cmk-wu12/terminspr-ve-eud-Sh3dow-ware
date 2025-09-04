@@ -54,15 +54,15 @@ export async function loginAction(_prevstate: PreviousStateSignUpProps, formData
     const data = await response.json()
     const CookieStore = await cookies()
 
-    if (CookieStore.get("access_token")?.value) {
-      return {
-        success: true,
-      }
-    }
-
-    const StoreCookie = CookieStore.set({
+    CookieStore.set({
       name: "access_token",
       value: data.token,
+      maxAge: data.validUntil
+    })
+
+    CookieStore.set({
+      name: "userID",
+      value: data.userId,
       maxAge: data.validUntil
     })
 
@@ -73,6 +73,7 @@ export async function loginAction(_prevstate: PreviousStateSignUpProps, formData
   } catch (error) {
     return {
       success: false,
+      message: "Brugernavnet eller adgangskoden eksiterer ikke."
     }
   }
 }
