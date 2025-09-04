@@ -5,6 +5,7 @@ export type Errors = {
 export type PreviousStateSignUpProps = {
   username?: string;
   password?: string;
+  message?: string
   success?: boolean;
   properties?: {
     username?: Errors
