@@ -51,6 +51,7 @@ export async function loginAction(_prevstate: PreviousStateSignUpProps, formData
     })
 
 
+
     const data = await response.json()
     const CookieStore = await cookies()
 
@@ -63,6 +64,12 @@ export async function loginAction(_prevstate: PreviousStateSignUpProps, formData
     CookieStore.set({
       name: "userID",
       value: data.userId,
+      maxAge: data.validUntil
+    })
+
+    CookieStore.set({
+      name: "role",
+      value: data.role,
       maxAge: data.validUntil
     })
 

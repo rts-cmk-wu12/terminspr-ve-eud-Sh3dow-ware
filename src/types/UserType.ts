@@ -7,13 +7,21 @@ export type UserActivity = {
   description: string;
   time: string;
   maxParticipants: number;
+  id?: number;
 }
 
-export interface UserProps {
+
+export interface getUserProps  {
+  success?: boolean
+  message?: string
+}
+
+
+export interface UserProps extends  getUserProps {
   username: string;
   firstname: string;
   lastname: string;
   age: number;
   role: "default" | "instructor";
-  activities: UserActivity[]
+  activities: UserActivity[],
 }
